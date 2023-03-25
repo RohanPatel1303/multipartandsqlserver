@@ -60,30 +60,8 @@ class _UploadImageScreenState extends State<UploadImageScreen> {
                   }),
             ),
             Expanded(
-              child: ListView.builder(
-                  itemCount: modal.length,
-                  itemBuilder: (context,index){
-                    return Padding(
-                      padding: const EdgeInsets.all(10),
-                      child: Card(
-                        elevation: 20,
-                        color: Colors.lightBlue,
-                        child: Column(
-                          children: [
-                            Text(modal[index].email.toString()),
-                            Text(modal[index].password.toString()),
-                            Text(modal[index].purpose.toString()),
-                            Text(modal[index].typeOfFood.toString()),
-                            Text(modal[index].email.toString()),
-
-                          ],
-                        ),
-                      ),
-                    );
-
-              }),
+              child:SizedBox(),
             ),
-            Text("Select Images"),
             ElevatedButton(
                 onPressed: () async {
                   final XFile? selected_img=await ImagePicker().pickImage(source: ImageSource.camera);
